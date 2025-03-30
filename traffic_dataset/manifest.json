@@ -1,0 +1,72 @@
+[
+  {
+    "id": "scenario_0",
+    "road_type": "x",
+    "network_file": "traffic_dataset\\scenario_0\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_0\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_0\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_1",
+    "road_type": "t",
+    "network_file": "traffic_dataset\\scenario_1\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_1\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_1\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_2",
+    "road_type": "x",
+    "network_file": "traffic_dataset\\scenario_2\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_2\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_2\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_3",
+    "road_type": "t",
+    "network_file": "traffic_dataset\\scenario_3\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_3\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_3\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_4",
+    "road_type": "x",
+    "network_file": "traffic_dataset\\scenario_4\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_4\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_4\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_5",
+    "road_type": "t",
+    "network_file": "traffic_dataset\\scenario_5\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_5\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_5\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_6",
+    "road_type": "x",
+    "network_file": "traffic_dataset\\scenario_6\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_6\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_6\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_7",
+    "road_type": "t",
+    "network_file": "traffic_dataset\\scenario_7\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_7\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_7\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_8",
+    "road_type": "x",
+    "network_file": "traffic_dataset\\scenario_8\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_8\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_8\\traffic_lights.tll.xml"
+  },
+  {
+    "id": "scenario_9",
+    "road_type": "t",
+    "network_file": "traffic_dataset\\scenario_9\\network.net.xml",
+    "route_file": "traffic_dataset\\scenario_9\\routes.rou.xml",
+    "tls_file": "traffic_dataset\\scenario_9\\traffic_lights.tll.xml"
+  }
+]

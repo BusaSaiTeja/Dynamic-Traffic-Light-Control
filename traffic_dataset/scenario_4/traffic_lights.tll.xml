@@ -1,0 +1,10 @@
+<additional>
+    <tlLogic id="B" type="static" programID="1" offset="0">
+        <!-- Phase 1: North-South Green (Others Red) -->
+        <phase duration="30" state="GGgrrrGGgrrr" />
+        <!-- Phase 2: East-West Green (Others Red) -->
+        <phase duration="30" state="rrrGGgrrrGGg" />
+        <!-- Phase 3: Pedestrian/All Red -->
+        <phase duration="5" state="rrrrrrrrrrrr" />
+    </tlLogic>
+</additional>

@@ -1,0 +1,14 @@
+<additional>
+   <tlLogic id="B" type="static" programID="1" offset="0">
+    <!-- Phase 1: North-South Green -->
+    <phase duration="30" state="GGGggrrrrrGGGggrrrrr"/>
+    <!-- Yellow transition -->
+    <phase duration="3" state="yyyyyrrrrryyyyyrrrrr"/> 
+    <!-- Phase 2: East-West Green -->
+    <phase duration="30" state="rrrrrGGGggrrrrrGGGgg"/>
+    <!-- Yellow transition -->
+    <phase duration="3" state="rrrrryyyyyrrrrryyyyy"/>
+    <!-- All Red phase -->
+    <phase duration="2" state="rrrrrrrrrrrrrrrrrrrr"/>
+</tlLogic>
+</additional>

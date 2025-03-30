@@ -1,0 +1,11 @@
+<configuration>
+        <input>
+            <net-file value="C:/Users/Saite/OneDrive/Coding Folder/Theme Based Project/deepseek/traffic_dataset/scenario_0/network.net.xml"/>
+            <route-files value="C:/Users/Saite/OneDrive/Coding Folder/Theme Based Project/deepseek/traffic_dataset/scenario_0/routes.rou.xml"/>
+            <additional-files value="C:/Users/Saite/OneDrive/Coding Folder/Theme Based Project/deepseek/traffic_dataset/scenario_0/traffic_lights.tll.xml"/>
+        </input>
+        <time>
+            <begin value="0"/>
+            <end value="3600"/>
+        </time>
+    </configuration>
