@@ -102,8 +102,9 @@ for episode in tqdm(range(NUM_EPISODES), desc="Training Progress"):
     print(f"Episode {episode + 1}: Total Reward = {total_reward}")
 
     if (episode + 1) % SAVE_INTERVAL == 0:
-        torch.save(agent.model.state_dict(), f"dqn_traffic_model_ep{episode + 1}.pth")
+        torch.save(agent.model.state_dict(), os.path.join("saved_models", f"dqn_traffic_model_ep{episode + 1}.pth"))
 
 env.close()
-torch.save(agent.model.state_dict(), "dqn_traffic_model_final.pth")
+torch.save(agent.model.state_dict(), os.path.join("saved_models", "dqn_traffic_model_final.pth")) 
+
 print("Training Complete! Model Saved.")

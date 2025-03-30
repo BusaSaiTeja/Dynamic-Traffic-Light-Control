@@ -1,0 +1,5 @@
+{
+    "junction_type": "x",
+    "valid_phases": [0, 1, 2, 3, 4],
+    "state_size": 20
+}
