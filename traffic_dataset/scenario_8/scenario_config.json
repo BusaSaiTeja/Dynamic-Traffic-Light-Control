@@ -1,5 +1,11 @@
 {
-    "junction_type": "x",
     "valid_phases": [0, 1, 2, 3, 4],
-    "state_size": 20
+    "state_size": 20,
+    "phase_mapping": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+    }
 }
