@@ -107,3 +107,4 @@ class SumoTrafficEnv(gym.Env):
                 traci.close()
         except traci.exceptions.FatalTraCIError:
             pass
+        
