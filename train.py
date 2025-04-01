@@ -16,6 +16,7 @@ EPSILON_DECAY = 0.995
 MIN_EPSILON = 0.01
 SAVE_INTERVAL = 50
 SAVE_DIR = "saved_models"
+MAX_ACTIONS = 5 
 
 # Initialize
 os.makedirs(SAVE_DIR, exist_ok=True)
@@ -45,7 +46,7 @@ def generate_sumo_config(scenario_path):
 
 # Training loop
 env = None
-agent = None
+agent = DQNAgent(state_dim=20, max_action_dim=MAX_ACTIONS)
 epsilon = 1.0
 
 for episode in tqdm(range(NUM_EPISODES), desc="Training Progress"):
@@ -67,7 +68,7 @@ for episode in tqdm(range(NUM_EPISODES), desc="Training Progress"):
         env = SumoTrafficEnv(sumo_cfg)
         agent = DQNAgent(
             state_dim=env.observation_space.shape[0],
-            action_dim=env.action_space.n
+            max_action_dim=MAX_ACTIONS
         )
         epsilon = 1.0  # Reset exploration
 
@@ -75,17 +76,16 @@ for episode in tqdm(range(NUM_EPISODES), desc="Training Progress"):
     state = env.reset()
     total_reward = 0
     done = False
-    valid_actions = list(env.valid_phases_mapping.keys())
 
     while not done:
         try:
-            action = agent.act(state, epsilon, valid_actions)
+            action = agent.act(state, epsilon, env.valid_phases)
             next_state, reward, done, _ = env.step(action)
             agent.remember(state, action, reward, next_state, done)
             state = next_state
             total_reward += reward
             
-            agent.replay(BATCH_SIZE, valid_actions)
+            agent.replay(BATCH_SIZE, env.valid_phases)
         except traci.exceptions.FatalTraCIError as e:
             print(f"Connection error: {str(e)}")
             done = True

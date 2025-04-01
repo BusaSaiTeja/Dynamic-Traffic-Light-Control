@@ -1,0 +1,142 @@
+{
+  "scenario_0": {
+    "static": {
+      "avg_queue": 162.28929999999997,
+      "avg_waiting_time": 125.6434158946897,
+      "avg_speed": 0.38046687798349205,
+      "total_arrived": 512
+    },
+    "dqn": {
+      "avg_queue": 176.86099999999996,
+      "avg_waiting_time": 137.02645872333693,
+      "avg_speed": 0.14292521518240278,
+      "total_arrived": 300
+    }
+  },
+  "scenario_1": {
+    "static": {
+      "avg_queue": 89.7364,
+      "avg_waiting_time": 103.20533512459163,
+      "avg_speed": 0.7883766871289138,
+      "total_arrived": 2408
+    },
+    "dqn": {
+      "avg_queue": 27.110000000000003,
+      "avg_waiting_time": 2.2172193962549147,
+      "avg_speed": 2.894328565890062,
+      "total_arrived": 6770
+    }
+  },
+  "scenario_2": {
+    "static": {
+      "avg_queue": 158.4364,
+      "avg_waiting_time": 134.04327036208753,
+      "avg_speed": 0.394317843344907,
+      "total_arrived": 501
+    },
+    "dqn": {
+      "avg_queue": 172.904,
+      "avg_waiting_time": 146.3871718223749,
+      "avg_speed": 0.14499396635428902,
+      "total_arrived": 300
+    }
+  },
+  "scenario_3": {
+    "static": {
+      "avg_queue": 81.4209,
+      "avg_waiting_time": 100.73719418678715,
+      "avg_speed": 0.8768257658108345,
+      "total_arrived": 2452
+    },
+    "dqn": {
+      "avg_queue": 6.094,
+      "avg_waiting_time": 0.721072692621835,
+      "avg_speed": 5.364272026515701,
+      "total_arrived": 6190
+    }
+  },
+  "scenario_4": {
+    "static": {
+      "avg_queue": 202.4355,
+      "avg_waiting_time": 125.10680808565579,
+      "avg_speed": 0.21536711902000943,
+      "total_arrived": 662
+    },
+    "dqn": {
+      "avg_queue": 208.43400000000003,
+      "avg_waiting_time": 134.86179459546568,
+      "avg_speed": 0.13123797234745085,
+      "total_arrived": 340
+    }
+  },
+  "scenario_5": {
+    "static": {
+      "avg_queue": 70.30040000000001,
+      "avg_waiting_time": 108.84118635892624,
+      "avg_speed": 0.8977482581501766,
+      "total_arrived": 1391
+    },
+    "dqn": {
+      "avg_queue": 1.825,
+      "avg_waiting_time": 0.612281976744186,
+      "avg_speed": 6.735602711734389,
+      "total_arrived": 2910
+    }
+  },
+  "scenario_6": {
+    "static": {
+      "avg_queue": 177.0438,
+      "avg_waiting_time": 150.34583590573385,
+      "avg_speed": 0.31181957906908586,
+      "total_arrived": 604
+    },
+    "dqn": {
+      "avg_queue": 189.672,
+      "avg_waiting_time": 163.82653148267755,
+      "avg_speed": 0.14207806144841428,
+      "total_arrived": 320
+    }
+  },
+  "scenario_7": {
+    "static": {
+      "avg_queue": 72.9162,
+      "avg_waiting_time": 106.33208774776169,
+      "avg_speed": 0.8215290482800462,
+      "total_arrived": 1579
+    },
+    "dqn": {
+      "avg_queue": 2.0,
+      "avg_waiting_time": 0.43683831842943777,
+      "avg_speed": 6.741856835871394,
+      "total_arrived": 3440
+    }
+  },
+  "scenario_8": {
+    "static": {
+      "avg_queue": 178.6057,
+      "avg_waiting_time": 134.56655041957487,
+      "avg_speed": 0.3050468587328827,
+      "total_arrived": 601
+    },
+    "dqn": {
+      "avg_queue": 191.085,
+      "avg_waiting_time": 146.24438049219546,
+      "avg_speed": 0.13790904829969913,
+      "total_arrived": 310
+    }
+  },
+  "scenario_9": {
+    "static": {
+      "avg_queue": 68.9139,
+      "avg_waiting_time": 108.76884022538532,
+      "avg_speed": 0.920177929841304,
+      "total_arrived": 1500
+    },
+    "dqn": {
+      "avg_queue": 1.8199999999999998,
+      "avg_waiting_time": 0.5002891844997108,
+      "avg_speed": 6.802772965285453,
+      "total_arrived": 3060
+    }
+  }
+}

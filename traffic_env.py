@@ -6,22 +6,22 @@ import traci
 import json
 
 class SumoTrafficEnv(gym.Env):
-    def __init__(self, sumo_cfg, max_steps=1000):
+    def __init__(self, sumo_cfg):
         super(SumoTrafficEnv, self).__init__()
         
         self.sumo_cfg = sumo_cfg
-        self.max_steps = max_steps
         self.step_count = 0
-        self.max_lanes = 20  # Maximum across all scenarios
+        self.max_steps = 1000
+        self.max_lanes = 20
         
         # Load scenario configuration
         self._load_scenario_config()
         
-        # Dynamic spaces
+        # Observation and action spaces
         self.observation_space = spaces.Box(
             low=0, high=1.0, shape=(self.max_lanes,), dtype=np.float32
         )
-        self.action_space = spaces.Discrete(len(self.valid_phases_mapping))
+        self.action_space = spaces.Discrete(self.max_actions)
         
         # Traffic light settings
         self.tls_id = "B"
@@ -46,7 +46,8 @@ class SumoTrafficEnv(gym.Env):
             
         self.valid_actions = list(map(int, config["valid_phases"]))
         self.raw_state_size = config["state_size"]
-        self.valid_phases_mapping = {int(k): v for k, v in config["phase_mapping"].items()}
+        self.phase_mapping = {int(k): v for k, v in config["phase_mapping"].items()}
+        self.max_actions = config["max_actions"]
 
     def _start_sumo(self):
         if traci.isLoaded():
@@ -77,10 +78,10 @@ class SumoTrafficEnv(gym.Env):
         return padded_state / 100.0
 
     def step(self, action):
-        if action not in self.valid_phases_mapping:
+        if action not in self.phase_mapping:
             raise ValueError(f"Invalid action {action} for current junction")
             
-        phase_idx = self.valid_phases_mapping[action]
+        phase_idx = self.phase_mapping[action]
         self._apply_action(phase_idx)
         traci.simulationStep()
         self.step_count += 1
@@ -107,4 +108,7 @@ class SumoTrafficEnv(gym.Env):
                 traci.close()
         except traci.exceptions.FatalTraCIError:
             pass
-        
+
+    @property
+    def valid_phases(self):
+        return list(self.phase_mapping.keys())

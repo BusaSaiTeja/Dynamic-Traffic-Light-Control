@@ -18,10 +18,10 @@ class DQN(nn.Module):
         return self.fc3(x)
 
 class DQNAgent:
-    def __init__(self, state_dim, action_dim, lr=0.001, gamma=0.99, 
+    def __init__(self, state_dim, max_action_dim, lr=0.001, gamma=0.99, 
                  epsilon=1.0, epsilon_min=0.01, epsilon_decay=0.995):
         self.state_dim = state_dim
-        self.action_dim = action_dim
+        self.max_action_dim = max_action_dim
         self.gamma = gamma
         self.epsilon = epsilon
         self.epsilon_min = epsilon_min
@@ -29,8 +29,8 @@ class DQNAgent:
         
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         
-        self.model = DQN(state_dim, action_dim).to(self.device)
-        self.target_model = DQN(state_dim, action_dim).to(self.device)
+        self.model = DQN(state_dim, max_action_dim).to(self.device)
+        self.target_model = DQN(state_dim, max_action_dim).to(self.device)
         self.optimizer = optim.Adam(self.model.parameters(), lr=lr)
         self.memory = deque(maxlen=2000)
         self.update_target_model()
@@ -47,7 +47,7 @@ class DQNAgent:
             q_values = self.model(state)
         
         q_values = q_values.cpu().numpy()
-        mask = np.full(self.action_dim, -np.inf)
+        mask = np.full(self.max_action_dim, -np.inf)
         mask[valid_actions] = q_values[valid_actions]
         return np.argmax(mask)
 
@@ -71,7 +71,7 @@ class DQNAgent:
         
         with torch.no_grad():
             next_q = self.target_model(next_states)
-            next_q[:, ~np.isin(range(self.action_dim), valid_actions)] = -np.inf
+            next_q[:, ~np.isin(range(self.max_action_dim), valid_actions)] = -np.inf
             target_q = rewards + (1 - dones.float()) * self.gamma * next_q.max(1)[0]
 
         loss = nn.functional.mse_loss(current_q, target_q)

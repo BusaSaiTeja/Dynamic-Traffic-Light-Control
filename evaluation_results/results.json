@@ -1,0 +1,37 @@
+{
+  "scenario_0": {
+    "avg_reward": -1315.0,
+    "avg_queue": 1.315,
+    "avg_waiting_time": 0.14893617021276598,
+    "avg_speed": 7.328803725191061,
+    "total_arrived": 2490
+  },
+  "scenario_2": {
+    "avg_reward": -1296.0,
+    "avg_queue": 1.2959999999999998,
+    "avg_waiting_time": 0.17611464968152865,
+    "avg_speed": 7.300000453554597,
+    "total_arrived": 2370
+  },
+  "scenario_4": {
+    "avg_reward": -3083.0,
+    "avg_queue": 3.0829999999999997,
+    "avg_waiting_time": 0.13423744397195722,
+    "avg_speed": 6.936818115245887,
+    "total_arrived": 6260
+  },
+  "scenario_6": {
+    "avg_reward": -1563.0,
+    "avg_queue": 1.5630000000000002,
+    "avg_waiting_time": 0.10061714789508484,
+    "avg_speed": 7.414948960843842,
+    "total_arrived": 3470
+  },
+  "scenario_8": {
+    "avg_reward": -1593.0,
+    "avg_queue": 1.593,
+    "avg_waiting_time": 0.08243650452001723,
+    "avg_speed": 7.354158510471952,
+    "total_arrived": 3530
+  }
+}
