@@ -71,8 +71,9 @@ Feel free to fork the project and submit pull requests. Please adhere to the exi
 👨‍💻 Author
 
 Sai Teja
-GitHub: @BusaSaiTeja
-LinkedIn: linkedin.com/in/busa-saiteja
+GitHub: @BusaSaiTeja 
+LinkedIn: linkedin.com/in/busa-saiteja 
 
 📄 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
